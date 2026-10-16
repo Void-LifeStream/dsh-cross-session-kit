@@ -77,7 +77,7 @@ foreach ($f in $files) {
 
   # 回执行必须有**引用块行首**（`> ✅`）—— 挡掉两个实测踩到的误报：
   #   ① 正文里出现的 `✅`（本鲸 13:0x 的回信正文里就有一行 `- ✅ …`，整个文件被误判成"已回执"）；
-  #   ② 说明用的「示例」行（`#235403` 当初留的那行占位）。
+  #   ② 说明用的「示例」行（**最早开箱的那只会话**当初留的占位行）。
   $scope = if ($sections.Count -gt 0) { $raw.Substring($sections[$sections.Count - 1].Index) } else { $raw }
   $acks = @([regex]::Matches($scope, ('(?m)^[ \t]*>[ \t]*' + $tick + '[^\r\n]*')) |
             Where-Object { $_.Value -notmatch '示例' })
