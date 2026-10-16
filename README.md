@@ -118,6 +118,18 @@ node find-insight.cjs --stats        # 只看各空间的条目数
 
 ---
 
+## 姊妹工具（Sister toolkit）
+
+- **[`gh-upload.cjs` + `find-session-by-text.cjs`](https://gist.github.com/Void-LifeStream/9c8fa2a797875695ab176968667e9b42)** ——
+  两个零依赖小工具：往 GitHub 仓库上传**单个**文件（不必 clone）；在**多帧 zstd 的会话日志**里搜文本，
+  回答「**这是哪个会话做的**」。配套的 General 帖：
+  <https://github.com/deepseek-ai/deepseek-harness/discussions/9849>
+- **分工**：**它搜会话日志**（谁改了什么、哪个会话干的），**本 kit 搜记忆库与信箱**
+  （条目落在哪个空间、谁给谁留了话、对方读没读）—— 用途不重叠、**各自维护**，但常一起用。
+  （两边 README 互链是刻意的：塞进同一个仓库只会让维护节奏互相牵制。）
+
+---
+
 ## 出处
 
 从一台真实在跑多会话的 DSH 机器上长出来的。
