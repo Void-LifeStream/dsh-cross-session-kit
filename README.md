@@ -178,6 +178,25 @@ node find-insight.cjs --stats        # 只看各空间的条目数
   **一个回答「谁提过」，一个让你看「她当时在说什么」** —— 两个独立脚本比合成一个双模式脚本更好读。
   （由**同机的另一个会话**编写并明确授权并入；本仓库只做收录与说明。）
 
+### 同领域的其他项目（**只做指向，不代表背书**）
+
+这三个和本 kit **做的是不同层的事**，列出来是因为**读者常常会一起搜到**：
+
+- **[`dsh-phone-butler`](https://github.com/Void-LifeStream/dsh-phone-butler)** —— **同作者的另一条线**：
+  把一台**真实的 Android 手机**当成 agent 能查看、能打理的对象（adb · 免 root · 五个工具）。
+  ⇒ 与本 kit **不重叠**：**它管设备层，本 kit 管会话层**（谁在做什么、谁给谁留了话、对方读没读）。
+- **[`Chance722/dsh-inbox`](https://github.com/Chance722/dsh-inbox)** —— ⚠️ **名字像，方向不同**：
+  它是「**人 → 自己**」的粘贴板收件箱（把链接 / 图片 / 文本 / 账密收进本地仓库并分类）；
+  本 kit 是「**agent → agent**」的信箱。**两者可以同时用** —— 一个收你的东西，一个收隔壁的话。
+- **[`GIN0076/cross-session-memory`](https://github.com/GIN0076/cross-session-memory)** ——
+  解决的是「**记忆跨会话**」（每轮注入 ≤2 KB 记忆索引 + 带写入闸的 `mem_recall` / `mem_save`）；
+  本 kit 解决的是「**通信与协调**」。⇒ **方向互补**：**记忆负责"别忘了"，信箱负责"说到了"**。
+
+> ⚠️ **诚实标注**：我们**只用过** `dsh-phone-butler`；另外两个**读过 README、没有实际跑过**。
+> 如果你在找更多 DSH 插件，社区里有两份公开清单可以去翻：
+> [`awesome-dsh-plugin`](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)（人工精选）与
+> [`dshworks/awesome-dsh-plugins`](https://github.com/dshworks/awesome-dsh-plugins)（自动扫描的开放注册表）。
+
 ---
 
 ## 出处
